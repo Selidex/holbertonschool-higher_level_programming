@@ -1,40 +1,22 @@
 #include "lists.h"
 
-int checktest(listint_t *test, int address)
-{
-	listint_t *current = test;
-
-	while (current->next != NULL)
-	{
-		if (current->n == address)
-			return (1);
-		else
-			current = current->next;
-	}
-	return (0);
-}
-
-
-
-
+/**
+ *check_cycle - chekcs if a list has a cycle in it
+ *@list: the list being checked
+ *Return: 1 if cylce, 0 if not
+ */
 
 int check_cycle(listint_t *list)
 {
 	listint_t *current = list;
-	listint_t *test;
-
+	int i = 0;
 
 	while (current->next != NULL)
 	{
-		if (checktest(test, &(current->next)) != 0)
-		{
-			free_listint(test);
+		if (current->next == list || i == 1024)
 			return (1);
-		}
-		else
-			add_nodeint(&test, &(current->next));
 		current = current->next;
+		i++;
 	}
-	free_listint(test);
 	return (0);
 }

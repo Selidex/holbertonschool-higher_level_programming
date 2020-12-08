@@ -11,6 +11,9 @@ int check_cycle(listint_t *list)
 	listint_t *current = list;
 	int i = 0;
 
+	if (list == NULL)
+		return (0);
+
 	while (current->next != NULL)
 	{
 		if (current->next == list || i == 1024)

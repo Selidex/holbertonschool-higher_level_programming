@@ -33,7 +33,7 @@ int is_palindrome(listint_t **head)
 	if (current == NULL)
 		return (1);
 	ll = list_len(current);
-	arr = calloc(ll, sizeof(int));
+	arr = malloc(sizeof(int) * ll);
 	if (arr == NULL)
 		return (0);
 

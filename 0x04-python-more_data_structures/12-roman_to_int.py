@@ -30,4 +30,4 @@ def roman_to_int(roman_string):
             tot += 4
         else:
             tot += rtoi[a]
-        return tot
+    return tot

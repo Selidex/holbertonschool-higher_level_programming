@@ -1,0 +1,1 @@
+This folder includes projects designed to learn python exceptions.

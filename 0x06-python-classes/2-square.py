@@ -2,6 +2,7 @@
 """This module shows initial value validation.
 """
 
+
 class Square:
     """This class shows value validation.
     """

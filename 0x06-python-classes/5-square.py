@@ -13,6 +13,7 @@ class Square:
     @property
     def size(self):
         return self.__size
+
     @size.setter
     def size(self, value):
         if type(value) != int:
@@ -24,9 +25,9 @@ class Square:
         self.__size = value
 
     def my_print(self):
-       if self.size is 0:
-           print("")
-       for i in range(0, self.size):
+        if self.size is 0:
+            print("")
+        for i in range(0, self.size):
             for j in range(0, self.size):
-                print("#",end="")
+                print("#", end="")
             print("")

@@ -72,13 +72,18 @@ class Square:
         Args:
             value(tuple): new position
         """
-        te = "position must be a tuple of 2 positive integers"
         if type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError(te)
+        j = 0
         for i in value:
             if not isinstance(i, int):
                 raise TypeError(te)
-        self.__position = position
+            if value[j] < 0:
+                raise TypeError(te)
+            j += 1
+        self.__position = value
 
     def my_print(self):
         """This method prints the square.

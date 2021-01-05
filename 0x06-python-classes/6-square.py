@@ -1,6 +1,18 @@
 #!/usr/bin/python3
+"""This module adds a new parameter to be updated
+"""
+
+
 class Square:
+    """This class is a square that also contains a position.
+    """
     def __init__(self, size=0, position=(0, 0)):
+        """Square initializer
+
+        Args:
+            size(int): size of the Square
+            position(tuple): starting location of the square
+        """
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -16,14 +28,23 @@ class Square:
         self.__position = position
 
     def area(self):
+        """Returns the area of the square
+        """
         return (self.__size * self.__size)
 
     @property
     def size(self):
+        """int: size of square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """size setter method
+
+        Args:
+            value(int): the size
+        """
         if type(value) != int:
             raise TypeError("size must be an integer")
             return
@@ -34,10 +55,17 @@ class Square:
 
     @property
     def position(self):
+        """tuple:position of square
+        """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """position setter methods
+
+        Args:
+            value(tuple): new position
+        """
         te = "position must be a tuple of 2 positive integers"
         if type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -47,6 +75,8 @@ class Square:
         self.__position = position
 
     def my_print(self):
+        """This method prints the square.
+        """
         if self.size is 0:
             print("")
 

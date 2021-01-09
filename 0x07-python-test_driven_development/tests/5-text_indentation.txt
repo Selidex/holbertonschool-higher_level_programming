@@ -19,8 +19,8 @@ simple test:
 ::
   >>> text_indentation(" My name: \n Bre")
   My name:
-  <BLANKLINE>
-  <BLANKLINE>
+ <BLANKLINE>
+ <BLANKLINE>
   Bre
 
 Improper case

@@ -23,6 +23,12 @@ simple test:
   <BLANKLINE>
   Bre
 
+testing multiple spaces in middle of string
+::
+  >>> text_indentation("My     name: is Dex")
+  My     name:
+  is Dex
+
 Improper case
 ===============
 text is not a string

@@ -30,6 +30,15 @@ testing multiple spaces in middle of string
   <BLANKLINE>
   is Dex
 
+testing special character in middle of excess space
+::
+  >>> text_indentation("My   :   name: is Dex")
+  My   :
+  <BLANKLINE>
+  name:
+  <BLANKLINE>
+  is Dex
+  
 Improper case
 ===============
 text is not a string

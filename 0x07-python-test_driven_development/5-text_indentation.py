@@ -22,5 +22,8 @@ def text_indentation(text):
             c = 1
         if x in arr:
             b = 1
-        print("{}".format(x), end="")
+        if x is " " and c is 1:
+            continue
+        else:
+            print("{}".format(x), end="")
     print("")

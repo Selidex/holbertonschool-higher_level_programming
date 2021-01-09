@@ -25,5 +25,6 @@ def text_indentation(text):
         if x is " " and c is 1:
             continue
         else:
+            c = 0
             print("{}".format(x), end="")
     print("")

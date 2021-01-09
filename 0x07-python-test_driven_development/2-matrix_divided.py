@@ -33,5 +33,5 @@ def matrix_divided(matrix, div):
     new_matrix = list(map(list, matrix))
     for i in range(0, len(new_matrix)):
         for j in range(0, len(new_matrix[i])):
-            new_matrix[i][j] = (matrix[i][j] / div)
+            new_matrix[i][j] = (round((matrix[i][j] / div), 2))
     return new_matrix

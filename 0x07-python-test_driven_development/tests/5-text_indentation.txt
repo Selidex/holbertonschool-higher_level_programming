@@ -1,0 +1,31 @@
+===================
+5-text_indentation
+===================
+
+This module inserts newlines into a string
+
+Proper cases
+===============
+simple test:
+::
+  >>> text_indentation = __import__('5-text_indentation').text_indentation
+  >>> text_indentation("Hi my: name is? Selidex")
+  Hi my:
+  name is?
+  Selidex
+
+::
+  >>> text_indentation(" My name: \n Bre")
+  My name:
+
+
+  Bre
+
+Improper case
+===============
+text is not a string
+::
+  >>> text_indentation(7)
+  Traceback (most recent call last):
+  ...
+  TypeError: text must be a string

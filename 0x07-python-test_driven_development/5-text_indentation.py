@@ -10,7 +10,7 @@ def text_indentation(text):
         text(string): the string to be split
     """
     b = 0
-    c = 0
+    c = 1
     arr = [".", ":", "?"]
     if type(text) != str:
         raise TypeError("text must be a string")

@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
             raise TypeError(te)
         if len(x) != mlen:
             raise TypeError(tl)
-        for y in matrix[x]:
+        for y in x:
             if type(y) != int:
                 raise TypeError(te)
 

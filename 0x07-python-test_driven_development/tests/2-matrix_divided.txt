@@ -1,0 +1,11 @@
+=================
+2-matrix_divided
+=================
+
+This module divides all elements of a matrix by a given numbers
+
+Proper Cases
+===============
+
+Improper Cases
+===============

@@ -1,0 +1,35 @@
+========================
+0-add_integer test file
+========================
+
+This module adds two integers together, using the ''add_integer()''
+
+Numbers
+=========
+''add_integer()'' returns the sum of its arguments.
+
+::
+  >>> add_integer = __import__('0-add_integer').add_integer
+  >>> add_integer(2, 3)
+  5
+
+This should also work with floats
+
+  ::
+    >>> add_integer(2.0, 4)
+    6
+
+Negative numbers should not impact this function
+
+  ::
+    >>> add_integer(4, -3)
+    1
+
+Non-Numbers
+=============
+
+
+
+
+Incorrect Number of Input
+==========================

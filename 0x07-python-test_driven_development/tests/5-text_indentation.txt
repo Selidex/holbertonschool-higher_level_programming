@@ -11,14 +11,16 @@ simple test:
   >>> text_indentation = __import__('5-text_indentation').text_indentation
   >>> text_indentation("Hi my: name is? Selidex")
   Hi my:
+  <BLANKLINE>
   name is?
+  <BLANKLINE>
   Selidex
 
 ::
   >>> text_indentation(" My name: \n Bre")
   My name:
-
-
+  <BLANKLINE>
+  <BLANKLINE>
   Bre
 
 Improper case

@@ -20,5 +20,5 @@ class TestMaxInteger(unittest.TestCase):
     def test_Type(self):
         """ Tests to make sure proper types are used """
         self.assertRaises(TypeError, max_integer, 2)
-        self.assertRaises(TypeError, max_integer, ["Pie", "Chocolate", "Zebr"])
+        self.assertRaises(Exception, max_integer, ["Pie", "Chocolate", "Zebr"])
         self.assertRaises(TypeError, max_integer, None)

@@ -10,5 +10,9 @@ def add_integer(a, b=98):
         a (int): the first number
         b (int): the second number, defaults to 98
     """
-    
-    return a + b
+    if not int(a) or float(a):
+        raise TypeError("a must be an integer")
+    if not int(b) or float(b):
+        raise TypeError("b must be an integer")
+
+    return int(a) + int(b)

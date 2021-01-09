@@ -27,9 +27,13 @@ Negative numbers should not impact this function
 
 Non-Numbers
 =============
+::
+  >>> add_integer("bob", 7)
+  a must be an integer
 
-
-
-
+::
+  >>> add_integer(7, "ross")
+  b must be an integer
+  
 Incorrect Number of Input
 ==========================

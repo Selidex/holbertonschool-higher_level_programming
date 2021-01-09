@@ -43,7 +43,7 @@ Martrix is not a list of lists
 
 Matrix is a matrix of non integers
 ::
-  >>> matrix = [ [a,b,c], [d,e,f] ]
+  >>> matrix = [ ["a", "b" , "c"], ["d" ,"e","f"] ]
   >>> matrix_divided(matrix, 2)
   Traceback (most recent call last):
   ...

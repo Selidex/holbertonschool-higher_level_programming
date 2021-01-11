@@ -3,9 +3,13 @@
 
 
 class Rectangle:
+    """ This is a simple rectangle class.
+
+    Attributes:
+        number_of_instances(int): how many active rectangles exist
+    """
     number_of_instances = 0
 
-    # This is a rectangle class
     def __init__(self, width=0, height=0):
         """ Initializes the rectangle.
 

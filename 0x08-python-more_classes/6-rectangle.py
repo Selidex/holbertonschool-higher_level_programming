@@ -33,7 +33,8 @@ class Rectangle:
         if self.__width is 0 or self.__height is 0:
             return ""
         else:
-            return (("#" * self.__width) + "\n") * self.__height
+            string = (("#" * self.__width) + "\n") * self.__height
+            return string[:1]
 
     def __repr__(self):
         # Returns official string rep of the class

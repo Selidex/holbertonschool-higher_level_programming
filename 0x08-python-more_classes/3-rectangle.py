@@ -27,14 +27,7 @@ class Rectangle:
             return ""
         else:
             string = (("#" * self.__width) + "\n") * self.__height
-            return string[:1]
-    def __repr__(self):
-        # Returns official string rep of the class
-        return 'Rectangle(%s, %s)' % (self.width, self.height)
-
-    def __del__(self):
-        # Deletion protocols
-        print("Bye Rectangle...")
+            return string[:-1]
 
     @property
     def width(self):

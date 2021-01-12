@@ -35,7 +35,7 @@ class Rectangle:
 
     def __del__(self):
         """ Deletion protocols"""
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
 
     @property
     def width(self):

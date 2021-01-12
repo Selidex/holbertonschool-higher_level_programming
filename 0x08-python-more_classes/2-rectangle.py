@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    # This is a rectangle class
+    """This is a rectangle class"""
     def __init__(self, width=0, height=0):
         """ Initializes the rectangle.
 
@@ -23,7 +23,7 @@ class Rectangle:
 
     @property
     def width(self):
-        # int: width of rectangle
+        """ int: width of rectangle"""
         return self.__width
 
     @width.setter
@@ -40,7 +40,7 @@ class Rectangle:
 
     @property
     def height(self):
-        # int: height of rectangle
+        """ int: height of rectangle"""
         return self.__height
 
     @height.setter
@@ -56,11 +56,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        # Returns area of the rectangle
+        """ Returns area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        # Returns perimeter of a rectangle.
+        """ Returns perimeter of a rectangle."""
         if self.__width is 0 or self.__height is 0:
             return 0
         else:

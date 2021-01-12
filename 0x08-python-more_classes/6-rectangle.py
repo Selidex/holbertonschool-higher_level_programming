@@ -29,7 +29,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        # Returns a string representation of the class
+        """ Returns a string representation of the class"""
         if self.__width is 0 or self.__height is 0:
             return ""
         else:
@@ -37,17 +37,17 @@ class Rectangle:
             return string[:1]
 
     def __repr__(self):
-        # Returns official string rep of the class
+        """ Returns official string rep of the class"""
         return 'Rectangle(%s, %s)' % (self.width, self.height)
 
     def __del__(self):
-        # Deletion protocols
-        print("Bye Rectangle...")
+        """ Deletion protocols"""
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
-        # int: width of rectangle
+        """ int: width of rectangle"""
         return self.__width
 
     @width.setter
@@ -64,7 +64,7 @@ class Rectangle:
 
     @property
     def height(self):
-        # int: height of rectangle
+        """ int: height of rectangle"""
         return self.__height
 
     @height.setter
@@ -80,11 +80,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        # Returns area of the rectangle
+        """ Returns area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-        # Returns perimeter of a rectangle.
+        """ Returns perimeter of a rectangle."""
         if self.__width is 0 or self.__height is 0:
             return 0
         else:

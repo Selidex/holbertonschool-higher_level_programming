@@ -21,10 +21,12 @@ This module validates values
   Traceback (most recent call last):
   ...
   TypeError: name must be an integer
+
   >>> bg.area()
   Traceback (most recent call last):
   ...
   Exception: area() is not implemented
+
   >>> bg.integer_validator("float", 0.2)
   Traceback (most recent call last):
   ...
@@ -46,6 +48,10 @@ This module validates values
   ...
   TypeError: name must be an integer
   >>> bg.integer_validator("name", int)
+  Traceback (most recent call last):
+  ...
+  TypeError: name must be an integer
+  >>> bg.integer_validator("name", True)
   Traceback (most recent call last):
   ...
   TypeError: name must be an integer

@@ -1,0 +1,1 @@
+This directory contains the files for the Almost a Circle project

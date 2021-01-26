@@ -104,15 +104,15 @@ class Rectangle(Base):
             args(list): list of arguments
             kwargs(list): a list of dictoniary like arguements"""
         if len(args) > 0:
-            if args[0]:
+            if len(args) >= 1:
                 self.id = args[0]
-            if args[1]:
+            if len(args) >= 2:
                 self.width = args[1]
-            if args[2]:
+            if len(args) >= 3:
                 self.height = args[2]
-            if args[3]:
+            if len(args) >= 4:
                 self.x = args[3]
-            if args[4]:
+            if len(args) >= 5:
                 self.y = args[4]
         else:
             if 'height' in kwargs:
@@ -125,3 +125,14 @@ class Rectangle(Base):
                 self.x = kwargs.get('x')
             if 'y' in kwargs:
                 self.y = kwargs.get('y')
+
+    def to_dictionary(self):
+        """Returns the dictionary of the rectangle"""
+        rect = {
+            'id' : self.id,
+            'width' : self.width,
+            'height' : self.height,
+            'x' : self.x,
+            'y' : self.y,
+        }
+        return rect

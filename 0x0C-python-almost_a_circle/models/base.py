@@ -59,7 +59,12 @@ class Base:
     def load_from_file(cls):
         """This method creates a new shape from a file"""
         filename = cls.__name__ + ".json"
-        with open(filename, mode="r") as fin:
-            return [cls.create(**obj) for obj in
-                    cls.from_json_string(fin.read())]
-        return []
+        jlist = []
+        try:
+            with open(filename, mode="r") as fin:
+                jlist = cls.from_json_string(fin.read())
+            for x in jlist:
+                jlist[x] = cls.create(**jlist[x])
+        except:
+            pass
+        return jlist

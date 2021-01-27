@@ -23,12 +23,39 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """Converts a json string to a dictionary"""
+        if json_string is None or len(json_string) is 0:
+            return []
+        else:
+            return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Saves the json string to a file"""
         filename = cls.__name__ + ".json"
         jlist = list([])
         for x in list_objs:
-            jlist.append(Base.to_json_string(x.to_dictionary()))
+            jlist.append(x.to_dictionary())
         with open(filename, 'w') as fin:
-            fin.write(str(jlist))
+            fin.write(cls.to_json_string(jlist))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """This method creates a new shape using a dictionary"""
+        if cls.__name__ is "Rectangle":
+            dummy = cls(1, 1)
+        if cls.__name__ is "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """This method creates a new shape from a file"""
+        filename = cls.__name__ + ".json"
+        with open(filename, mode="r") as fin:
+            return [cls.create(**obj) for obj in
+                    cls.from_json_string(fin.read())]
+        return []

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 """This module is the base class of all shapes in this project"""
 import json
 
@@ -66,5 +66,5 @@ class Base:
             for x in jlist:
                 jlist[x] = cls.create(**jlist[x])
         except:
-            pass
+            return []
         return jlist

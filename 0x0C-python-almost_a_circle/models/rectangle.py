@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """This is the rectangle shape"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
     """This class inherits base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes the rectangle.
 
@@ -24,6 +26,7 @@ class Rectangle(Base):
         """Returns the string rep of the class"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
     @property
     def width(self):
         """ int: width of rectangle"""
@@ -129,10 +132,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Returns the dictionary of the rectangle"""
         rect = {
-            'id' : self.id,
-            'width' : self.width,
-            'height' : self.height,
-            'x' : self.x,
-            'y' : self.y,
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y,
         }
         return rect

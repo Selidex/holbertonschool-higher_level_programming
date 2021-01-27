@@ -31,8 +31,12 @@ class Square(Rectangle):
         """Sets size of the square.
         Args:
             value(int): size to set square to"""
-        self.width = value
-        self.height = value
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+        self.__height = value
 
     def update(self, *args, **kwargs):
         """Updates the square

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module contains the Square class that inherits Rectanlge"""
 from models.rectangle import Rectangle
+import json
 
 
 class Square(Rectangle):
@@ -60,9 +61,9 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns the dictionary definition of the class"""
         squ = {
-            'id' : self.id,
-            'x' : self.x,
-            'y' : self.y,
-            'size' : self.size
+            'id': self.id,
+            'x': self.x,
+            'y': self.y,
+            'size': self.size
         }
         return squ

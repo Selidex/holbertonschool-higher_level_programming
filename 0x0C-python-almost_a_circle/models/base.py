@@ -1,4 +1,4 @@
-B#!/usr/bin/python3
+#!/usr/bin/python3
 """This module is the base class of all shapes in this project"""
 import json
 

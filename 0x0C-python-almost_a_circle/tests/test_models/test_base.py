@@ -7,8 +7,6 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
     """This class tests Base"""
-
-
     def test_taskone(self):
         """tests task one functiosn"""
         b1 = Base()

@@ -5,7 +5,7 @@ import json
 from models.rectangle import Rectangle
 
 
-class TestBase(unittest.TestCase):
+class TestRectangle(unittest.TestCase):
     """This class tests rectangle"""
     def test_tasktwo(self):
         """Tests task two functions"""

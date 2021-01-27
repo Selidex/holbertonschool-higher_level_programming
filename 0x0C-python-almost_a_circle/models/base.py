@@ -2,9 +2,11 @@
 """This module is the base class of all shapes in this project"""
 import json
 
+
 class Base:
     """This class forms the base of all shape classes"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """initializes the class
 
@@ -15,6 +17,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Sends the dictionary to a json string"""

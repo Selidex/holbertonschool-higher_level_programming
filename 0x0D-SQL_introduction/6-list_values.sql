@@ -1,2 +1,2 @@
 -- shows all rows in a table
-SHOW first_table
+SELECT * FROM first_table

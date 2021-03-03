@@ -1,4 +1,4 @@
-B-- shows all show genres
+-- shows all show genres
 -- shows NULL if no id given
 -- doing a comment test
 SELECT tv_shows.title, tv_show_genres.genre_id

@@ -7,6 +7,6 @@ if (process.argv.length < 4) {
   for (i = 2; i < process.argv.length; i++) {
     ary.push(Number(process.argv[i]));
   }
-  ary.sort();
-  console.log(ary[(ary.length - 2)]);
+  ary.sort(function (a, b) { return b - a; });
+  console.log(ary[1]);
 }

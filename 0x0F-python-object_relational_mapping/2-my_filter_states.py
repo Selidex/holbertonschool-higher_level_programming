@@ -13,10 +13,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states WHERE name = '{}' \
-    ORDER BY id ASC".format(test))
+    ORDER BY id ASC".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:
-        if row[1].startswith("A"):
-            print(row)
+        print(row)
     cur.close()
     db.close()

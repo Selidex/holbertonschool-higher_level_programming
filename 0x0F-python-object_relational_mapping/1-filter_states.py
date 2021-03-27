@@ -1,15 +1,12 @@
 #!/usr/bin/python3
 """Only prints stuff that starts with N"""
 import MySQLdb
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    MY_HOST = "localhost"
-    MY_USER = sys.argv[1]
-    MY_PASS = sys.argv[2]
-    MY_DB = sys.argv[3]
-    db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
+    db = MySQLdb.connect(host='localhost', user=argv[1], passwd=argv[2],\
+                         db=argv[3])
     cur = db.cursor()
     cur.execute("SELECT id, name FROM states WHERE name LIKE 'N%'\
     ORDER BY id ASC")

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This program lists the table of a database"""
 import MySQLdb
 import sys
 

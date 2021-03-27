@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Only prints stuff that starts with N"""
 import MySQLdb
 import sys
 

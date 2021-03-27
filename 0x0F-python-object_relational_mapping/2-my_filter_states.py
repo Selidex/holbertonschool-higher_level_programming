@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Arizona is the only thing printed here"""
 import MySQLdb
 import sys
 

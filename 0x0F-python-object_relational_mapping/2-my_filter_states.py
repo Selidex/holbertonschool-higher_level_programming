@@ -16,6 +16,7 @@ if __name__ == "__main__":
     ORDER BY id ASC".format(test))
     query_rows = cur.fetchall()
     for row in query_rows:
-        print(row)
+        if row[1].startswith("A"):
+            print(row)
     cur.close()
     db.close()

@@ -5,14 +5,12 @@ import sys
 
 
 if __name__ == "__main__":
-    MY_HOST = "localhost"
-    MY_USER = sys.argv[1]
-    MY_PASS = sys.argv[2]
-    MY_DB = sys.argv[3]
-    test = sys.argv[4]
-    db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
+    db = MySQLdb.connect(host="localhost",
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT id, name FROM states WHERE name = '{}' \
+    cur.execute("SELECT id, name FROM states WHERE BINARY name = '{}' \
     ORDER BY id ASC".format(sys.argv[4]))
     query_rows = cur.fetchall()
     for row in query_rows:

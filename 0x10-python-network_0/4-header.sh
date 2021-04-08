@@ -1,3 +1,3 @@
 #!/bin/bash
 # recieves body size of a site
-curl -s -H "X-HolbertonSchool-User-Id: 89" "$1"
+curl "$1" -sH "X-HolbertonSchool-User-Id: 98"

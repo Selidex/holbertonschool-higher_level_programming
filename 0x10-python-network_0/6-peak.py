@@ -2,6 +2,7 @@
 """ Test function find_peak """
 
 def find_peak(list_of_integers):
+   """Tests the peak of the list"""
    loi = list_of_integers
    if loi is None or len(loi) == 0:
       return None

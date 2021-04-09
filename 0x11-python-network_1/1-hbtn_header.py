@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""Python script that takes in a URL"""
+import urllib.request, sys
+
+
+if __name__ == "__main__":
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        resdict = response.info()
+        print(resdict.get('X-Request-Id'))

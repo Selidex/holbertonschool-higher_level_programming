@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python script that takes in a URL"""
-import urllib.request, sys
+import urllib.request
+import sys
 
 
 if __name__ == "__main__":
